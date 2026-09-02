@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#11131a" />
+    <title>Controle RGB</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <div class="lamp" id="lamp" aria-hidden="true"></div>
+      <p class="eyebrow">LED RGB · ESP32</p>
+      <h1>Escolha a sua luz</h1>
+      <p id="status" class="status">Bluetooth desconectado</p>
+
+      <label class="picker-label" for="colorPicker">Cor</label>
+      <input id="colorPicker" type="color" value="#ff0000" disabled />
+      <output id="hexValue">#FF0000 · R: 255 · G: 0 · B: 0</output>
+
+      <div class="presets" aria-label="Cores rápidas">
+        <button class="preset" style="--color:#ff0000" data-color="#ff0000" aria-label="Vermelho"></button>
+        <button class="preset" style="--color:#ffff00" data-color="#ffff00" aria-label="Amarelo"></button>
+        <button class="preset" style="--color:#00ff00" data-color="#00ff00" aria-label="Verde"></button>
+        <button class="preset" style="--color:#00ffff" data-color="#00ffff" aria-label="Ciano"></button>
+        <button class="preset" style="--color:#0000ff" data-color="#0000ff" aria-label="Azul"></button>
+        <button class="preset" style="--color:#ff00ff" data-color="#ff00ff" aria-label="Roxo"></button>
+      </div>
+
+      <button id="connectButton" class="connect">Conectar ao LED</button>
+      <p class="hint">Use Chrome ou Edge e mantenha o Bluetooth ligado.</p>
+    </main>
+    <script src="app.js?v=4"></script>
+  </body>
+</html>
